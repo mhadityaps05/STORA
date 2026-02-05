@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* Pastikan import sudah benar */
+@import "@fontsource-variable/nokora";
+@import "@fontsource/lato";
+@import "@fontsource-variable/noto-serif";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* 1. Daftarkan di Tailwind Theme (v4) agar bisa pakai utility class */
+@theme {
+  --font-lato: "Lato", sans-serif;
+  --font-nokora: "Nokora Variable", sans-serif;
+  --font-noto: "Noto Serif Variable", serif; /* Gunakan nama lengkap Variable */
+}
+
+/* 2. Global Styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  /* Gunakan Noto Serif sebagai default jika mau */
+  font-family: "Lato", serif;
+}
+
+/* 3. Class Manual (Optional jika sudah pakai @theme) */
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+
+.font-nokora {
+  font-family: "Nokora Variable", sans-serif;
+}
+
+.font-noto {
+  font-family: "Noto Serif Variable", serif;
+}
